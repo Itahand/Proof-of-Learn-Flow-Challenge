@@ -5,10 +5,20 @@
 		"sandboxnet": "access.sandboxnet.nodes.onflow.org:9000",
 		"testnet": "access.devnet.nodes.onflow.org:9000"
 	},
+	"contracts": {
+		"Challenge1": "./contracts/Challenge1.cdc"
+	},
 	"accounts": {
 		"emulator-account": {
 			"address": "f8d6e0586b0a20c7",
 			"key": "4cc1647f06ab3dc4a41c38e378f082214993f786fce4071ceea01af138ef3dc0"
+		}
+	},
+	"deployments": {
+		"emulator": {
+			"emulator-account": [
+				"Challenge1"
+			]
 		}
 	}
 }
