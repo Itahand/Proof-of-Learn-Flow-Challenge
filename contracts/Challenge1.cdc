@@ -12,7 +12,6 @@ pub contract Challenge1 {
   }
     // Events
   pub event ContractInitialized()
-  pub event Added(id: UInt64, from: Address?)
 
   // Public Functions
 

@@ -11,14 +11,19 @@ access(self) var d: String
 //
 // 3 Functions
 //
-pub fun publicFunc() {}
-access(contract) fun contractFunc() {}
-access(self) fun privateFunc() {}
+pub fun publicFunc() {} THIS CAN BE CALLED PRETTY MUCH ANYWHERE IN THE CONTRACT AND OUTSIDE OF IT
+access(contract) fun contractFunc() {} THIS CAN BE CALLED ANYWHERE INSIDE THE CONTRACT
+access(self) fun privateFunc() {} THIS CAN NLY BE CALLED IN THE CURRENT AND INNER SCOPE
 
 pub fun structFunc() {
 /**************/
 /*** AREA 1 ***/
 /**************/
+var a: read and write
+var b: read and write
+var c: read and write
+var d: read and write
+//
 }
 init() {
 self.a = "a"
@@ -29,12 +34,16 @@ self.d = "d"
 }
 
 pub resource SomeResource {
-pub var e: Int
-pub fun resourceFunc() {
+  pub var e: Int
+  pub fun resourceFunc() {
 /**************/
 /*** AREA 2 ***/
 /**************/
-}
+  var a: read and write
+  var b: read
+  var c: read
+  var d:
+  }
 init() {
 self.e = 17
 }
@@ -46,6 +55,10 @@ pub fun questsAreFun() {
 /**************/
 /*** AREA 3 ****/
 /**************/
+  var a: read and write
+  var b: read
+  var c: read
+  var d:
 }
 init() {
 self.testStruct = SomeStruct()

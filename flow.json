@@ -6,18 +6,27 @@
 		"testnet": "access.devnet.nodes.onflow.org:9000"
 	},
 	"contracts": {
-		"Challenge1": "./contracts/Challenge1.cdc"
+		"Challenge1": "./contracts/Challenge1.cdc",
+		"Challenge3": "./contracts/Challenge3.cdc",
+		"NonFungibleToken": "./contracts/NonFungibleToken.cdc"
 	},
 	"accounts": {
 		"emulator-account": {
 			"address": "f8d6e0586b0a20c7",
 			"key": "4cc1647f06ab3dc4a41c38e378f082214993f786fce4071ceea01af138ef3dc0"
+		},
+		"emulator-alice": {
+			"address": "0x01cf0e2f2f715450",
+			"key": "1a05ba433be5af2988e814d1e4fa08f1574140e6cb5649a861cc6377718c51be"
 		}
 	},
 	"deployments": {
 		"emulator": {
+			"emulator-alice": [],
 			"emulator-account": [
-				"Challenge1"
+				"Challenge1",
+				"Challenge3",
+				"NonFungibleToken"
 			]
 		}
 	}
