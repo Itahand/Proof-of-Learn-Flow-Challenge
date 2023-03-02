@@ -1,4 +1,4 @@
-import Challenge1 from "../contracts/Challenge1.cdc"
+import Challenge1 from "../../contracts/Challenge1.cdc"
 
 transaction() {
   prepare(account: AuthAccount) {

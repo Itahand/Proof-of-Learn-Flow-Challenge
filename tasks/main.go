@@ -19,10 +19,10 @@ func main() {
 	fmt.Scanln()
 
 	color.Red("The Total number of structs in the array should be Zero(0) before transaction")
-	o.Script("fetchArray")
+	o.Script("./Challenge1/fetchArray")
 	color.Green("-----------------------------PASSED---------------------")
-	o.Tx("addToArray", WithSigner("account"))
+	o.Tx("/Challenge1/addToArray", WithSigner("account"))
 	color.Red("The Total number of structs in the array should be One(1) before transaction")
-	o.Script("fetchArray")
+	o.Script("./Challenge1/fetchArray")
 	color.Green("-----------------------------PASSED---------------------")
 }
